@@ -319,11 +319,46 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
 
+/* Discover Our Other Trips Button */
+.discover-trips-button-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-discover {
+  display: inline-block;
+  padding: 12px 30px; /* Decreased padding */
+  background-color: #82b8e4; /* Blue background same as travel button */
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: "Kanit", sans-serif;
+  font-size: 16px; /* Decreased font size */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid #82b8e4; /* Match border to background */
+  text-size-adjust: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-discover:hover {
+  background-color: transparent;
+  color: #82b8e4; /* Blue text on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
 /* Mobile button styling */
 @media (max-width: 767px) {
   .btn-travel {
     font-size: 13px; /* Mobile font size updated to 13px */
     padding: 12px 25px; /* Increased padding for slightly more height */
+  }
+
+  .btn-discover {
+    font-size: 13px; /* Mobile font size */
+    padding: 12px 30px; /* Reduced padding for mobile */
   }
 }
 
@@ -440,10 +475,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.program-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
+/* No hover effect on card itself */
 
 .program-image-wrapper {
   position: relative;
@@ -499,17 +531,15 @@
   transform: scale(1.05);
 }
 
-.program-card:hover .program-overlay {
-  background: rgba(0, 0, 0, 0.3);
-}
+/* No hover effect on overlay */
 /* ---------- Departures Grid ---------- */
 .departures-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 0;
 }
 @media (max-width: 768px) {
   .departures-grid {
@@ -521,6 +551,7 @@
 
 /* ---------- Program Card ---------- */
 .program-card {
+  background: rgb(238, 238, 238); /* New background color */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -528,7 +559,7 @@
   transition: 0.4s ease;
 }
 .program-image-wrapper {
-  height: 270px;
+  height: 320px; /* Increased height by 20px */
   overflow: hidden;
   position: relative;
 }
@@ -536,9 +567,10 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: brightness(0.9); /* Slightly darker */
   transition: transform 0.5s ease, filter 0.3s ease;
 }
-.program-card:hover img {
+.program-card:hover .program-image-wrapper img {
   transform: scale(1.05);
   filter: brightness(0.8);
 }
@@ -561,27 +593,91 @@
   left: 20px;
   right: 20px;
   background: rgba(255, 255, 255, 0.9);
-  padding: 8px 12px;
+  padding: 8px 12px; /* Increased padding */
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 60px; /* Increased height */
+  align-items: center; /* Center items vertically */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
 .departure-left {
   display: flex;
   align-items: center;
   gap: 5px;
+  height: 24px; /* Match price icon height */
+  margin: auto 0; /* Vertically center within available space */
+}
+
+.departure-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .departure-info {
   display: flex;
   flex-direction: column;
   text-align: left;
+  justify-content: center; /* Vertically center the content */
+  height: 100%; /* Take full height of parent */
+  flex: 1; /* Allow it to grow and take available space */
+}
+
+.departure-date-overlay {
+  font-size: 15px; /* Increased by 1px */
+  font-weight: 800; /* Bolder font weight */
+  color: #8a8784; /* Lighter color */
+}
+
+.price-amount {
+  font-size: 15px; /* Increased by 1px */
+  font-weight: 800; /* Bolder font weight */
+  color: #8a8784; /* Lighter color */
+  text-align: right;
+  margin-top: 4px; /* Add some spacing between Price label and amount */
+  align-self: flex-end; /* Align to right */
+  white-space: nowrap; /* Prevent wrapping */
+  line-height: 1; /* Ensure consistent line height */
+  max-width: 100%; /* Prevent overflow */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
 }
 
 .price-info {
   display: flex;
   flex-direction: column;
   text-align: right;
+  align-items: flex-end;
+  justify-content: center; /* Vertically center the content */
+  height: 100%; /* Take full height of parent */
+  flex: 0 0 auto; /* Don't grow, don't shrink */
+  min-width: 120px; /* Ensure minimum width for content */
+  max-width: 40%; /* Prevent overflow */
+  overflow: hidden; /* Hide overflow */
+  margin-right: 0; /* Remove right margin to move content more to the right */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.price-left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: 24px; /* Match calendar icon height */
+  margin: 0; /* Remove vertical margins */
+  align-self: flex-end; /* Align to right */
+  width: 100%; /* Take full width */
+  justify-content: flex-end; /* Align content to right */
+  padding-right: 5px; /* Reduce padding to move content more to the right */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.price-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px; /* Match calendar icon height */
+  width: 24px; /* Match calendar icon width for proper centering */
 }
 
 .buttons-overlay {
@@ -589,24 +685,26 @@
   left: 20px;
 }
 .buttons-overlay .btn {
-  padding: 6px 12px;
+  padding: 8px 16px; /* Increased padding */
   border: none;
   border-radius: 4px;
-  font: 600 12px "Poppins", sans-serif;
+  font: 600 14px "Poppins", sans-serif; /* Increased font size by 2px */
   cursor: pointer;
-  transition: 0.3s;
+  transition: none; /* Removed hover transition */
 }
 .btn.confirmed {
-  background: #f2f2f2;
-  color: #59814b;
+  background: rgb(255, 255, 255); /* White background */
+  color: #4a6b3e; /* Slightly darker text color */
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between icon and text */
 }
+
 .btn.complete {
-  background: #f2f2f2;
-  color: #595552;
+  background: rgb(255, 255, 255); /* White background */
+  color: #4a4744; /* Slightly darker text color */
 }
-.btn:hover {
-  background: #e0e0e0;
-}
+/* Removed hover effect */
 
 /* ---------- Card Text ---------- */
 .program-title {
@@ -624,7 +722,7 @@
   color: rgb(132, 119, 112);
   font-family: "Kanit", sans-serif;
   font-weight: 700;
-  font-size: 28.8px;
+  font-size: 32px;
   margin: 15px 20px 10px;
   text-align: left;
 }
