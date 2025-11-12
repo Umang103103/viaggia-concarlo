@@ -126,3 +126,240 @@
   text-align: center;
   margin-top: 20px; /* adjust space as needed */
 }
+/* Something */
+.program-card {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.program-image-wrapper {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.program-image-wrapper .card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.program-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.program-overlay::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+.program-title {
+  color: #ffffff;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.program-card:hover .program-image-wrapper .card-img {
+  transform: scale(1.05);
+}
+
+.program-card:hover .program-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+/* ---------- Departures Grid ---------- */
+.departures-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .departures-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+}
+
+/* ---------- Program Card ---------- */
+.program-card {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: 0.4s ease;
+}
+.program-image-wrapper {
+  height: 270px;
+  overflow: hidden;
+  position: relative;
+}
+.program-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+.program-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.8);
+}
+
+/* ---------- Overlays ---------- */
+.card-info-overlay,
+.buttons-overlay {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card-info-overlay {
+  display: flex;
+  justify-content: space-between; /* left and right items */
+  align-items: center;
+  gap: 10px;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.departure-left {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* space between icon and text */
+}
+
+.departure-info {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.buttons-overlay {
+  bottom: 20px;
+  left: 20px;
+}
+.buttons-overlay .btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  font: 600 12px "Poppins", sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn.confirmed {
+  background: #f2f2f2;
+  color: #59814b;
+}
+.btn.complete {
+  background: #f2f2f2;
+  color: #595552;
+}
+.btn:hover {
+  background: #e0e0e0;
+}
+
+/* ---------- Card Text ---------- */
+.program-title {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+.program-title-below {
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 15px 20px 10px;
+}
+
+/* ---------- Card Link ---------- */
+.card-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px 20px 15px;
+  text-decoration: none;
+}
+.card-link-text,
+.card-link-arrow {
+  color: #82b8e4;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.program-card:hover .card-link-text,
+.program-card:hover .card-link-arrow,
+.card-link:hover .card-link-text,
+.card-link:hover .card-link-arrow {
+  color: #000;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 768px) {
+  .program-image-wrapper {
+    height: 220px;
+  }
+  .card-info-overlay {
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    padding: 6px 10px;
+  }
+  .buttons-overlay {
+    bottom: 15px;
+    left: 15px;
+  }
+  .program-title-below {
+    font-size: 1rem;
+    margin: 10px 15px 6px;
+  }
+}
