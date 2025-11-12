@@ -13,13 +13,14 @@
     left: 0;
     right: 0;
     z-index: 20;
-    background: #fff;
-    border: 1px solid #7a7a7a;
+    background: rgb(255, 255, 255); /* Solid white background */
+    border: 1px solid rgba(122, 122, 122, 0.3); /* Semi-transparent border */
     border-radius: 30px;
     padding: 10px 20px;
     width: 90%;
     margin: 0 auto;
-    transition: box-shadow 0.3s;
+    transition: all 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
   }
 
   .custom-navbar.sticky {
@@ -27,7 +28,8 @@
     top: 0;
     margin: 0 auto;
     border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: rgb(255, 255, 255); /* Solid white when sticky */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow when sticky */
   }
 }
 
@@ -70,6 +72,108 @@
 .custom-navbar .navbar-nav .nav-link:hover {
   color: #82b8e4;
 }
+@media (min-width: 992px) {
+  /* Show dropdown on hover */
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  /* Dropdown menu styles */
+  .navbar-nav .dropdown .dropdown-menu {
+    background-color: #84776f;
+    border: none;
+    position: absolute;
+    left: 0;
+    min-width: 200px;
+    margin: 0;
+    top: calc(
+      100% + 35px
+    ); /* move it fully below navbar with extra space if needed */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* make sure it appears on top */
+  }
+
+  /* Dropdown items */
+  .navbar-nav .dropdown .dropdown-menu .dropdown-item {
+    color: #fff;
+    padding: 10px 20px;
+    transition: background 0.3s;
+  }
+
+  /* Hover effect for items */
+  .navbar-nav .dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #7a7a7a;
+    color: #fff;
+  }
+}
+
+@media (max-width: 992px) {
+  /* Mobile menu background and text */
+  .navbar-collapse {
+    background-color: #595552; /* Dark brown background as requested */
+    padding: 10px 0;
+    width: 100vw; /* Full viewport width */
+    position: absolute; /* Position absolutely to overlay content */
+    top: 100%; /* Position below navbar */
+    left: 0;
+    z-index: 1000; /* Ensure it overlays content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  }
+
+  .navbar-collapse .nav-link,
+  .navbar-collapse .dropdown-item {
+    color: #ffffff !important; /* White text as requested */
+    text-align: left; /* Align text to left */
+    padding: 10px 20px;
+    font-family: "Kanit", sans-serif; /* Kanit font as requested */
+  }
+
+  .navbar-collapse .nav-link:hover,
+  .navbar-collapse .dropdown-item:hover {
+    color: #ffffff !important; /* Keep white text on hover */
+    background-color: #4a4744; /* Slightly darker background on hover */
+  }
+
+  .navbar-collapse .navbar-nav {
+    text-align: left; /* Ensure all nav items are left-aligned */
+    width: 100%;
+  }
+
+  /* Dropdown menu background and text */
+  .navbar-collapse .dropdown-menu {
+    background-color: #595552; /* Dark brown background as requested */
+    text-align: left; /* Left align dropdown items */
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* Full width */
+  }
+
+  .navbar-collapse .dropdown-menu .dropdown-item {
+    color: #ffffff !important; /* White text as requested */
+    padding: 10px 30px; /* Indent dropdown items */
+    font-family: "Kanit", sans-serif; /* Kanit font as requested */
+  }
+
+  .navbar-collapse .dropdown-menu .dropdown-item:hover {
+    background-color: #4a4744; /* Slightly darker background on hover */
+    color: #ffffff !important; /* Keep white text on hover */
+  }
+
+  /* Dropdown toggle arrow */
+  .navbar-collapse .dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.5em;
+    vertical-align: middle;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+  }
+}
 
 /* Mobile navbar adjustments */
 @media (max-width: 992px) {
@@ -78,14 +182,41 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    position: relative; /* Needed for absolute positioning of dropdown */
   }
   .custom-navbar .navbar-nav {
     flex-direction: column;
     margin-top: 10px;
-    gap: 10px;
+    gap: 0; /* Remove gap for tighter menu */
+    align-items: stretch; /* Stretch items to full width */
   }
   .custom-navbar .navbar-nav .nav-link {
     text-align: left;
+    padding: 12px 20px; /* Increase padding for better touch targets */
+  }
+
+  /* Dropdown menu items */
+  .custom-navbar .navbar-nav .dropdown-menu {
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+  }
+
+  .custom-navbar .navbar-nav .dropdown-menu .dropdown-item {
+    padding: 12px 40px; /* More indentation for dropdown items */
+  }
+
+  /* Mobile menu icon (hamburger) */
+  .navbar-toggler {
+    background-color: #595552; /* Dark brown background as requested */
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 }
 
@@ -95,9 +226,176 @@
   object-fit: cover;
 }
 
+/* Carousel text overlay */
+.carousel-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.hero-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 96px;
+  font-weight: 600; /* Medium weight for thinner appearance */
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 5px; /* Reduced letter spacing for better centering */
+  line-height: 1.2; /* Adjusted line height for better spacing */
+  text-align: center;
+  text-size-adjust: 100%;
+  text-decoration: none;
+  /* Transparent fill with white outline */
+  color: transparent;
+  -webkit-text-stroke: 2px white; /* Thicker white stroke */
+  text-stroke: 2px white;
+  margin: 0 auto; /* Center the block element */
+  padding: 0; /* Removed padding for better centering */
+  width: fit-content; /* Make width adjust to content */
+  display: block; /* Ensure it's a block element */
+}
+
+/* Responsive styling */
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 96px;
+    letter-spacing: 5px;
+    line-height: 1.2;
+  }
+}
+
+/* Mobile-specific styling */
+@media (max-width: 767px) {
+  .hero-heading {
+    font-size: 36px;
+    letter-spacing: 2px;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-heading {
+    font-size: 28px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+  }
+}
+
+/* Carousel button overlay */
+.carousel-button-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.btn-travel {
+  display: inline-block;
+  padding: 15px 35px; /* Increased padding for more height and width */
+  background-color: #82b8e4; /* Blue background as requested */
+  color: #ffffff; /* White text as requested */
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: "Kanit", sans-serif;
+  font-size: 18px; /* Desktop font size as requested */
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid #82b8e4; /* Match border to background */
+  text-size-adjust: 100%; /* Text size adjust as requested */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow */
+}
+
+.btn-travel:hover {
+  background-color: transparent;
+  color: #82b8e4; /* Blue text on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Mobile button styling */
+@media (max-width: 767px) {
+  .btn-travel {
+    font-size: 13px; /* Mobile font size updated to 13px */
+    padding: 12px 25px; /* Increased padding for slightly more height */
+  }
+}
+
 @media (max-width: 767px) {
   .carousel-inner img {
     height: 445.05px;
+  }
+}
+
+/* Carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  bottom: 30px;
+  top: auto;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  opacity: 1;
+  z-index: 20;
+  transform: translateY(0);
+}
+
+.carousel-control-prev {
+  right: 90px;
+  left: auto;
+}
+
+.carousel-control-next {
+  right: 30px;
+  left: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background: none;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-top: 3px solid white;
+  border-right: 3px solid white;
+}
+
+.carousel-control-prev-icon::before {
+  transform: translate(-50%, -50%) rotate(-135deg);
+}
+
+.carousel-control-next-icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  opacity: 0.8;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
   }
 }
 
