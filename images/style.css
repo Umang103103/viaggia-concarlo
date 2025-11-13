@@ -1404,382 +1404,50 @@ body {
   margin: 0;
   padding: 0;
 }
-
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f8f9fa;
-}
-
-.footer {
-  background-color: #595552;
-  color: #fff;
-  padding: 30px 0 30px;
-  font-family: "Lato", Sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.footer-content {
-  padding-left: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-/* Mobile styles */
-@media (max-width: 767px) {
-  .footer-content {
-    padding-left: 25px;
-  }
-
-  .footer .container {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-
-  .mt-4 {
-    margin-left: 15px;
-  }
-
-  .footer-content .mt-4:first-child {
-    margin-left: 0;
-  }
-
-  .technical-organization p {
-    font-size: 12px;
-  }
-}
-
-.footer .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 10px 0;
-}
-
-.align-top {
-  align-self: flex-start;
-}
-
-.footer h5 {
-  color: #fff;
-  margin-bottom: 20px;
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.footer h6 {
-  color: #fff;
-  margin-bottom: 15px;
-  font-weight: bold;
-  font-size: 1.25rem;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer ul li {
-  margin-bottom: 10px;
-}
-
-.footer ul li a {
-  color: #82b8e4;
-  text-decoration: none;
-  transition: color 0.3s;
-  font-size: 16px;
-}
-
-.footer ul li a:hover {
-  color: #fff;
-}
-
-.footer p {
-  color: #fff;
-  font-family: "Lato", Sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-.footer .mt-3 p {
-  color: #fff;
-  margin-bottom: 0;
-  font-size: 12px;
-}
-
-.phone-number {
-  color: #82b8e4;
-  font-size: 12px;
-}
-
-.contact-number {
-  font-family: "Lato", Sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.contact-number p {
-  font-size: 12px;
-  margin-bottom: 0;
-}
-
-.rating-content {
-  color: #000;
-  font-family: "Lato", Sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-}
-
-.technical-organization p {
-  font-size: 12px;
-  margin-bottom: 0;
-}
-
-.verified {
-  font-size: 11px;
-}
-
-.google-rating {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 10px;
-  margin-top: 20px;
-  max-width: 220px;
-}
-
-.google-icon {
-  width: 50px;
-  height: 50px;
-  vertical-align: middle;
-}
-
-.rating-stars {
-  margin-bottom: 5px;
-}
-
-.star {
-  color: #ffc107;
-  font-size: 14px;
-}
-
-.rating-value {
-  font-weight: bold;
-}
-
-.top-rated {
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.social-icons a {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  background-color: #595552;
-  border: 3px solid #fff;
-  border-radius: 4px;
-  text-align: center;
-  line-height: 24px;
-  margin-right: 10px;
-  transition: all 0.3s;
-  color: #fff;
-}
-
-.social-icons a:hover {
-  background-color: #fff;
-  color: #595552;
-  transform: translateY(-3px);
-}
-
-.contact-info {
-  background-color: #444;
-  padding: 30px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.copyright {
-  background-color: #333;
-  padding: 20px 0;
-  text-align: center;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.logo {
-  max-width: 200px;
-  margin-bottom: 20px;
-  filter: brightness(0) invert(1);
-}
-
-.partner-logos img {
-  max-height: 60px;
-  margin: 10px 15px;
-  opacity: 0.7;
-  transition: opacity 0.3s;
-}
-
-.partner-logos img:hover {
-  opacity: 1;
-}
-
-.newsletter-form .form-control {
-  background-color: #fff;
-  border: 1px solid #666;
-  color: #000;
-  border-radius: 4px;
-  max-width: 80%;
-  height: calc(2.25rem + 2px);
-}
-
-.signup-btn {
-  background-color: #82b8e4;
-  border: 1px solid #82b8e4;
-  border-radius: 4px;
-  color: #fff;
-  font-weight: bold;
-  padding: 8px 20px;
-  height: calc(2.25rem + 2px);
-  width: 80%;
-  margin-top: 5px;
-}
-
-.signup-btn:hover {
-  background-color: #6da5d9;
-  border-color: #6da5d9;
-  color: #fff;
-}
-
-.form-check-label {
-  font-size: 16px;
-  color: #fff;
-}
-
-.form-check-input {
-  background-color: #fff;
-  border: 1px solid #666;
-}
-
-.form-check-input:checked {
-  background-color: #fff;
-  border-color: #666;
-  position: relative;
-}
-
-.form-check-input:checked::after {
-  content: "✓";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #8b4513; /* Brown color for the tick */
-  font-size: 12px;
-  font-weight: bold;
-}
-
-.form-check-input:focus {
-  box-shadow: none;
-}
-.partners-section {
-  width: 100%;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
   background-color: #f5f5f5;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-.partners-section * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.partners-container {
+.partners-section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
   text-align: center;
 }
 
-.partners-title {
+.section-title {
   font-size: 32px;
-  color: #595552;
+  color: #333;
   margin-bottom: 40px;
   font-weight: bold;
-  font-family: Arial, sans-serif;
 }
 
-.partners-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  justify-items: center;
+.partners-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.partner-item {
+.partner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  max-width: 250px;
+  width: 250px;
 }
 
 .partner-logo {
-  width: 100%;
-  max-width: 200px;
+  width: 200px;
   height: auto;
   margin-bottom: 15px;
   object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.partner-logo:hover {
-  transform: scale(1.05);
 }
 
 .partner-name {
-  font-size: 15px;
+  font-size: 24px;
   font-weight: bold;
-  color: #000000;
-  font-family: Arial, sans-serif;
-}
-
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-  .partners-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .partners-title {
-    font-size: 28px;
-    margin-bottom: 30px;
-  }
-
-  .partner-item {
-    max-width: 150px;
-  }
-
-  .partner-logo {
-    max-width: 120px;
-  }
-
-  .partner-name {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .partners-container {
-    padding: 30px 15px;
-  }
-
-  .partners-grid {
-    gap: 15px;
-  }
-
-  .partners-title {
-    font-size: 24px;
-    margin-bottom: 25px;
-  }
+  color: #333;
 }
