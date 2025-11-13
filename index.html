@@ -764,7 +764,7 @@
     </div>
 
     <!-- Objective Nepal Section -->
-    <div class="objective-nepal">
+    <div class="living-journey">
       <img
         src="./images/a.jpg"
         alt="Nepal landscape"
@@ -777,9 +777,12 @@
             Nepal is where everything began for me and my second home. It's a
             lifelong destination for many. I owe to the country and its people
             the motivations that drove me to travel for a living, to the point
-            of making it my profession.With
-            <span class="white-bold">Viaggia con Carlo</span>, I specialized in
-            <span class="white-bold"
+            of making it my profession.
+          </p>
+          <p>
+            With <span class="bold-text">Viaggia con Carlo</span>, I specialized
+            in
+            <span class="bold-text"
               >Nepal , as a travel and life destination</span
             >
             : I also dedicated the
@@ -791,11 +794,77 @@
       </div>
     </div>
 
+    <!-- Nepal Is More Than A Destination Section -->
+    <div class="nepal-more-section">
+      <div class="nepal-more-content">
+        <h3>NEPAL IS MORE THAN A DESTINATION</h3>
+        <p>
+          Nepal is more than a destination. It's the place that has seen all of
+          us become <span class="nepal-bold">expert</span> travelers. That's why
+          we've made it the
+          <span class="nepal-bold">protagonist of our destinations</span>. But
+          it's its spirit that has influenced the way we make
+          <span class="nepal-bold">Nepal trips</span> a
+          <span class="nepal-bold">total experience</span>.
+        </p>
+        <!-- Nepal in Preview Button -->
+        <div class="nepal-preview-button-container">
+          <a href="#" class="btn btn-nepal-preview">NEPAL IN PREVIEW</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIVING THE JOURNEY Section -->
+    <div class="living-journey">
+      <img
+        src="./images/c.jpg"
+        alt="Nepal landscape"
+        class="nepal-background-image"
+      />
+      <div class="nepal-text-container">
+        <div class="nepal-content">
+          <h3>Living the journey</h3>
+          <p>
+            I consider myself a <span class="bold-text">world explorer</span> .
+            For me, traveling means moving, with a
+            <span class="bold-text">free and respectful spirit</span> , to
+            encounter places and people. It means feeling enriched by the lands
+            I've encountered, the challenges I've faced, the goals I've
+            achieved, and the dreams I've fulfilled. There's too much beauty to
+            keep to myself. Whether it's Asia, Africa, Europe, or South America,
+            I'm ready, along with my group of companions, to travel with you in
+            a safe and organized manner.
+          </p>
+          <p>
+            <span class="bold-text"
+              >And it won't just be a journey but a true encounter: with others,
+              with the world, with yourself.</span
+            >
+          </p>
+        </div>
+      </div>
+      <!-- Let's get to know each other Button -->
+      <div class="living-journey-button-container">
+        <a href="javascript:void(0);" class="btn btn-living-journey"
+          >LET'S GET TO KNOW EACH OTHER</a
+        >
+      </div>
+    </div>
+
+    <!-- They Say About Us Section -->
+    <div class="they-say-about-us">
+      <h3>They say about us</h3>
+    </div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const navbar = document.querySelector(".custom-navbar");
-      const originalTop = navbar.offsetTop;
+      let originalTop = navbar.offsetTop;
+
+      window.addEventListener("resize", () => {
+        originalTop = navbar.offsetTop;
+      });
 
       window.addEventListener("scroll", () => {
         if (window.scrollY >= originalTop) {

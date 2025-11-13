@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+/* Body background */
+body {
+  background-image: url("https://viaggiaconcarlo.com/wp-content/uploads/2022/12/impronta-bg.svg");
+  background-repeat: repeat;
+  background-position: center;
+  background-size: auto;
+}
+
 /* Navbar for desktop */
 @media (min-width: 992px) {
   .custom-navbar {
@@ -175,6 +183,31 @@
 
 /* Mobile navbar adjustments */
 @media (max-width: 992px) {
+  .custom-navbar {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(122, 122, 122, 0.3);
+    border-radius: 0; /* Remove rounded corners for mobile */
+    padding: 10px 20px;
+    width: 100%;
+    margin: 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Remove the sticky class for mobile since we're using fixed positioning */
+  .custom-navbar.sticky {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    border-radius: 0;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+  }
+
   .custom-navbar .container {
     display: flex;
     justify-content: space-between;
@@ -639,6 +672,15 @@
   box-sizing: border-box;
 }
 
+.departure-header span,
+.departure-date-overlay,
+.price-left span,
+.price-amount {
+  color: #85736c; /* Updated to requested color */
+  font-size: 1.1rem; /* Updated to requested font size */
+  line-height: 1.1; /* Updated to requested line height */
+}
+
 .departure-left {
   display: flex;
   align-items: center;
@@ -777,15 +819,29 @@
 .card-link {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Changed back to flex-end for right alignment */
   margin: 10px 20px 15px;
   text-decoration: none;
 }
+
+.card-link-text {
+  order: 1; /* Changed order to position text before arrow */
+}
+
+.card-link-arrow {
+  order: 2; /* Changed order to position arrow after text */
+  margin-right: 0; /* Removed right margin */
+  margin-left: 10px; /* Added left margin to separate arrow from text */
+}
+
 .card-link-text,
 .card-link-arrow {
-  color: #82b8e4;
+  color: #3172b5; /* Changed from #82b8e4 to #3172B5 */
   font-weight: 600;
   transition: 0.3s;
+  font-size: 1.1rem; /* Added font size */
+  text-align: end; /* Added text alignment */
+  text-transform: uppercase; /* Added text transformation */
 }
 .program-card:hover .card-link-text,
 .program-card:hover .card-link-arrow,
@@ -826,7 +882,7 @@
 
 /* Objective Nepal Section */
 .objective-nepal {
-  height: 442.992px;
+  height: 500px; /* Increased from 442.992px to 500px for desktop */
   width: 100%;
   padding: 0 20px 10px 20px;
   margin: 60px 0;
@@ -837,6 +893,20 @@
   overflow: hidden;
 }
 
+/* Desktop-specific adjustments */
+@media (min-width: 769px) {
+  .objective-nepal {
+    height: 600px; /* Increased from 542.992px to 600px for desktop */
+    margin: 60px 0;
+  }
+
+  .nepal-text-container {
+    width: 35%;
+    height: 95%;
+    margin-left: 100px;
+  }
+}
+
 .nepal-background-image {
   position: absolute;
   top: 0;
@@ -845,6 +915,8 @@
   height: 100%;
   object-fit: cover;
   z-index: 0;
+  filter: brightness(1) contrast(0.9) saturate(0.6); /* Slightly darker image */
+  opacity: 0.6;
 }
 
 .objective-nepal::before {
@@ -854,7 +926,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  ); /* Darker gradient for better text contrast */
   z-index: 1;
 }
 
@@ -872,15 +948,6 @@
   margin-left: 40px;
 }
 
-/* Desktop-specific adjustments */
-@media (min-width: 769px) {
-  .nepal-text-container {
-    width: 35%;
-    height: 95%;
-    margin-left: 60px;
-  }
-}
-
 .nepal-content {
   max-width: 100%;
   margin: 0;
@@ -892,53 +959,448 @@
 .nepal-content h3 {
   font-family: "Kanit", sans-serif;
   font-size: 35px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 30px;
   color: white;
   text-align: left;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Stronger text shadow for better visibility */
 }
 
 .nepal-content p {
   font-family: "Kanit", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.6;
   margin-bottom: 20px;
   color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Stronger text shadow for better visibility */
 }
 
 .white-bold {
   color: white;
-  font-weight: 700;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Stronger text shadow for bold text */
 }
 
 .blue-text {
   color: #82b8e4;
-  font-weight: 700;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Stronger text shadow for blue text */
 }
 
 @media (max-width: 768px) {
   .objective-nepal {
     padding: 40px 15px 10px 15px;
     margin: 30px 0;
-    height: 80vh;
+    height: 90vh;
   }
 
   .nepal-text-container {
     width: 90%;
     height: 90%;
     padding: 15px;
+    margin-left: 0; /* Remove left margin for mobile */
+    align-items: flex-start; /* Align content to the left */
+  }
+
+  .nepal-content {
+    text-align: left; /* Ensure text is left-aligned */
+    padding-left: 0; /* Remove any padding that might affect alignment */
   }
 
   .nepal-content h3 {
     font-size: 24px;
     margin-bottom: 20px;
+    text-align: left; /* Ensure heading is left-aligned */
   }
 
   .nepal-content p {
     font-size: 17px;
     line-height: 1.5;
     margin-bottom: 15px;
+    text-align: left; /* Ensure paragraph is left-aligned */
   }
+}
+
+.nepal-preview-button-container {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.btn-nepal-preview {
+  display: inline-block;
+  padding: 12px 25px; /* Decreased padding from 12px 30px to reduce width */
+  background-color: #82b8e4; /* Updated to match requested color */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 53px 53px 53px 53px; /* Updated to match requested border-radius */
+  font-family: "Roboto", Sans-serif; /* Updated to match requested font-family */
+  font-size: 14px; /* Decreased from 16px by 2px */
+  font-weight: 400; /* Updated to match requested font-weight */
+  text-transform: uppercase; /* Ensure uppercase text */
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid #82b8e4; /* Updated to match background color */
+  text-size-adjust: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  fill: #ffffff; /* Added fill color */
+}
+
+.btn-nepal-preview:hover {
+  background-color: #595552;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile button styling */
+@media (max-width: 767px) {
+  .btn-nepal-preview {
+    font-size: 10px; /* Decreased from 12px by 2px */
+    padding: 8px 15px; /* Decreased padding to reduce width */
+  }
+
+  .btn-know-each-other {
+    font-size: 13px;
+    padding: 6px 35px; /* Decreased height (8px to 6px), increased width (30px to 35px) for mobile */
+    text-align: left; /* Ensure text is left-aligned on mobile */
+  }
+}
+
+.nepal-more-section {
+  padding: 20px 20px; /* Decreased from 40px to 20px */
+  margin: 30px 0; /* Match the margin of other sections */
+  background-color: transparent;
+  text-align: left;
+}
+
+/* Desktop-specific adjustments */
+@media (min-width: 769px) {
+  .nepal-more-section {
+    padding: 30px 20px; /* Decreased from 60px to 30px */
+    margin: 60px 0; /* Match the margin of other sections */
+  }
+}
+
+.nepal-more-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+}
+
+.nepal-more-content h3 {
+  font-family: "Kanit", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: #595552;
+  align-self: flex-start;
+  max-width: 50%;
+}
+
+.nepal-more-content p {
+  font-family: "Kanit", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #595552;
+  margin-bottom: 0;
+  align-self: flex-start;
+  max-width: 40%;
+}
+
+.nepal-bold {
+  font-weight: 700; /* Make the specified words bolder */
+}
+
+@media (max-width: 768px) {
+  .nepal-more-section {
+    padding: 40px 15px;
+  }
+
+  .nepal-more-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    color: #333333;
+    line-height: 1.8;
+    font-weight: 600;
+  }
+
+  .nepal-more-content p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+
+/* Living Journey Section */
+.living-journey {
+  height: 500px;
+  width: 100%;
+  padding: 0 20px 10px 20px;
+  margin: 60px 0; /* Match margin with objective-nepal */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.living-journey .nepal-text-container {
+  position: relative;
+  z-index: 2;
+  width: 40%; /* Match width with objective-nepal */
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  margin-left: 40px; /* Match left margin with objective-nepal */
+}
+
+.living-journey .nepal-content {
+  max-width: 100%;
+  margin: 0;
+  text-align: left;
+  color: white;
+  padding: 0;
+}
+
+.living-journey .nepal-content h3 {
+  font-family: "Kanit", sans-serif; /* Match font-family with objective-nepal */
+  font-size: 35px; /* Match font-size with objective-nepal */
+  font-weight: 700; /* Match font-weight with objective-nepal */
+  text-transform: uppercase; /* Match text-transform with objective-nepal */
+  margin-bottom: 30px; /* Match margin-bottom with objective-nepal */
+  color: white; /* Match color with objective-nepal */
+  text-align: left; /* Match text-align with objective-nepal */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Match text-shadow with objective-nepal */
+}
+
+.living-journey .nepal-content p {
+  font-family: "Kanit", sans-serif; /* Match font-family with objective-nepal */
+  font-size: 20px; /* Increased from 18px to 20px */
+  font-weight: 600; /* Match font-weight with objective-nepal */
+  line-height: 1.6; /* Match line-height with objective-nepal */
+  margin-bottom: 20px; /* Match margin-bottom with objective-nepal */
+  color: white; /* Match color with objective-nepal */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Match text-shadow with objective-nepal */
+  text-align: left;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Living Journey Button Container */
+.living-journey-button-container {
+  position: absolute;
+  bottom: 30px;
+  left: 10%; /* Position button on the left side */
+  transform: translateX(0); /* Remove centering transform */
+  z-index: 10;
+}
+
+.living-journey .nepal-content p {
+  font-size: 17px;
+  line-height: 1.2;
+  margin-bottom: 10px; /* Decreased from default to reduce bottom space */
+  text-align: left;
+  max-width: 100%;
+  height: auto;
+}
+
+.living-journey .nepal-content .bold-text {
+  font-weight: 800; /* Make the text bolder, matching the white-bold class from objective nepal */
+  color: white; /* Ensure the color is white to match objective nepal */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Match text-shadow with objective-nepal */
+}
+
+/* Living Journey Button Container */
+@media (min-width: 1024px) {
+  .living-journey-button-container {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-190%);
+    z-index: 10;
+  }
+}
+
+/* Desktop-specific adjustments */
+@media (min-width: 769px) {
+  .living-journey {
+    height: 600px; /* Match height with objective-nepal */
+    margin: 60px 0; /* Match margin with objective-nepal */
+  }
+
+  .living-journey .nepal-text-container {
+    width: 35%; /* Match width with objective-nepal */
+    height: 95%; /* Match height with objective-nepal */
+    margin-left: 100px; /* Match left margin with objective-nepal */
+  }
+}
+
+.living-journey .nepal-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(1) contrast(0.9) saturate(0.6);
+  opacity: 0.6;
+}
+
+.living-journey::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .living-journey {
+    padding: 40px 15px 10px 15px;
+    margin: 30px 0;
+    height: 90vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .living-journey .nepal-text-container {
+    width: 95%;
+    height: auto;
+    padding: 15px;
+    margin-left: 0;
+    align-items: flex-start;
+    position: relative;
+    top: 20px;
+  }
+
+  .living-journey .nepal-content {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .living-journey .nepal-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-top: 0;
+  }
+
+  .living-journey .nepal-content p {
+    font-size: 17px;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    text-align: left;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.btn-living-journey {
+  display: inline-block;
+  padding: 12px 25px; /* Same as btn-nepal-preview */
+  background-color: #bc0b16; /* Changed from #82b8e4 to #BC0B16 */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 53px 53px 53px 53px; /* Changed from 30px to 53px all corners */
+  font-family: "Roboto", Sans-serif; /* Changed from "Kanit", sans-serif to "Roboto", Sans-serif */
+  font-size: 14px; /* Same as btn-nepal-preview */
+  font-weight: 400; /* Changed from 600 to 400 */
+  text-transform: uppercase; /* Ensure uppercase text */
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid #bc0b16; /* Changed from #82b8e4 to #BC0B16 */
+  text-size-adjust: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  fill: #ffffff; /* Added fill color */
+}
+
+.btn-living-journey:hover {
+  background-color: #ffffff; /* Changed from #595552 to #ffffff */
+  color: #bc0b16; /* Changed from #ffffff to #BC0B16 */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile button styling */
+@media (max-width: 767px) {
+  .btn-living-journey {
+    font-size: 10px;
+    padding: 8px 30px; /* Increased width from 25px to 30px horizontal padding */
+    white-space: nowrap; /* Prevent text wrapping to next line */
+  }
+}
+
+/* Living Journey Button Overlay */
+.living-journey-button-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.btn-know-each-other {
+  display: inline-block;
+  padding: 8px 45px;
+  background-color: #82b8e4;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 30px;
+  font-family: "Kanit", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid #82b8e4;
+  text-size-adjust: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: left; /* Left align the text inside the button */
+}
+
+.btn-know-each-other:hover {
+  background-color: #595552;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+@media (max-width: 768px) {
+  .btn-know-each-other {
+    padding: 5px 80px; /* ↓ less height, ↑ more width */
+    font-size: 0.4rem; /* slightly smaller text */
+    text-align: left; /* Ensure text is left-aligned on mobile */
+  }
+}
+
+.they-say-about-us {
+  text-align: center;
+  margin: 40px 0;
+  padding: 20px;
+}
+
+.they-say-about-us h3 {
+  font-family: "Kanit", Sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #595552;
+  margin: 0;
+  padding: 0;
 }
