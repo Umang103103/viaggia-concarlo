@@ -13,14 +13,14 @@
     left: 0;
     right: 0;
     z-index: 20;
-    background: rgb(255, 255, 255); /* Solid white background */
-    border: 1px solid rgba(122, 122, 122, 0.3); /* Semi-transparent border */
+    background: rgb(255, 255, 255);
+    border: 1px solid rgba(122, 122, 122, 0.3);
     border-radius: 30px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     width: 90%;
     margin: 0 auto;
     transition: all 0.3s;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   .custom-navbar.sticky {
@@ -28,14 +28,14 @@
     top: 0;
     margin: 0 auto;
     border-radius: 30px;
-    background: rgb(255, 255, 255); /* Solid white when sticky */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow when sticky */
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
   }
 }
 
 /* Navbar logo */
 .navbar-logo {
-  height: 85px;
+  height: 70px;
   width: auto;
   display: block;
 }
@@ -61,7 +61,7 @@
 }
 .custom-navbar .navbar-nav .nav-link {
   color: #84776f;
-  padding: 10px 20px;
+  padding: 5px 20px;
   font: 600 14px / normal "Kanti", sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -86,11 +86,9 @@
     left: 0;
     min-width: 200px;
     margin: 0;
-    top: calc(
-      100% + 35px
-    ); /* move it fully below navbar with extra space if needed */
+    top: calc(100% + 35px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    z-index: 999; /* make sure it appears on top */
+    z-index: 999;
   }
 
   /* Dropdown items */
@@ -110,56 +108,56 @@
 @media (max-width: 992px) {
   /* Mobile menu background and text */
   .navbar-collapse {
-    background-color: #595552; /* Dark brown background as requested */
+    background-color: #595552;
     padding: 10px 0;
-    width: 100vw; /* Full viewport width */
-    position: absolute; /* Position absolutely to overlay content */
-    top: 100%; /* Position below navbar */
+    width: 100vw;
+    position: absolute;
+    top: 100%;
     left: 0;
-    z-index: 1000; /* Ensure it overlays content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
   .navbar-collapse .nav-link,
   .navbar-collapse .dropdown-item {
-    color: #ffffff !important; /* White text as requested */
-    text-align: left; /* Align text to left */
+    color: #ffffff !important;
+    text-align: left;
     padding: 10px 20px;
-    font-family: "Kanit", sans-serif; /* Kanit font as requested */
+    font-family: "Kanit", sans-serif;
   }
 
   .navbar-collapse .nav-link:hover,
   .navbar-collapse .dropdown-item:hover {
-    color: #ffffff !important; /* Keep white text on hover */
-    background-color: #4a4744; /* Slightly darker background on hover */
+    color: #ffffff !important;
+    background-color: #4a4744;
   }
 
   .navbar-collapse .navbar-nav {
-    text-align: left; /* Ensure all nav items are left-aligned */
+    text-align: left;
     width: 100%;
   }
 
   /* Dropdown menu background and text */
   .navbar-collapse .dropdown-menu {
-    background-color: #595552; /* Dark brown background as requested */
-    text-align: left; /* Left align dropdown items */
+    background-color: #595552;
+    text-align: left;
     border: none;
     border-radius: 0;
     box-shadow: none;
     margin: 0;
     padding: 0;
-    width: 100%; /* Full width */
+    width: 100%;
   }
 
   .navbar-collapse .dropdown-menu .dropdown-item {
-    color: #ffffff !important; /* White text as requested */
-    padding: 10px 30px; /* Indent dropdown items */
-    font-family: "Kanit", sans-serif; /* Kanit font as requested */
+    color: #ffffff !important;
+    padding: 10px 30px;
+    font-family: "Kanit", sans-serif;
   }
 
   .navbar-collapse .dropdown-menu .dropdown-item:hover {
-    background-color: #4a4744; /* Slightly darker background on hover */
-    color: #ffffff !important; /* Keep white text on hover */
+    background-color: #4a4744;
+    color: #ffffff !important;
   }
 
   /* Dropdown toggle arrow */
@@ -182,17 +180,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    position: relative; /* Needed for absolute positioning of dropdown */
+    position: relative;
   }
   .custom-navbar .navbar-nav {
     flex-direction: column;
     margin-top: 10px;
-    gap: 0; /* Remove gap for tighter menu */
-    align-items: stretch; /* Stretch items to full width */
+    gap: 0;
+    align-items: stretch;
   }
   .custom-navbar .navbar-nav .nav-link {
     text-align: left;
-    padding: 12px 20px; /* Increase padding for better touch targets */
+    padding: 12px 20px;
   }
 
   /* Dropdown menu items */
@@ -204,12 +202,12 @@
   }
 
   .custom-navbar .navbar-nav .dropdown-menu .dropdown-item {
-    padding: 12px 40px; /* More indentation for dropdown items */
+    padding: 12px 40px;
   }
 
   /* Mobile menu icon (hamburger) */
   .navbar-toggler {
-    background-color: #595552; /* Dark brown background as requested */
+    background-color: #595552;
     border: none;
     padding: 8px;
     border-radius: 4px;
@@ -222,7 +220,7 @@
 
 /* Carousel image */
 .carousel-inner img {
-  height: 83vh;
+  height: 90vh;
   object-fit: cover;
 }
 
@@ -242,22 +240,22 @@
 .hero-heading {
   font-family: "Montserrat", sans-serif;
   font-size: 96px;
-  font-weight: 600; /* Medium weight for thinner appearance */
+  font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
-  letter-spacing: 5px; /* Reduced letter spacing for better centering */
-  line-height: 1.2; /* Adjusted line height for better spacing */
+  letter-spacing: 5px;
+  line-height: 1.2;
   text-align: center;
   text-size-adjust: 100%;
   text-decoration: none;
   /* Transparent fill with white outline */
   color: transparent;
-  -webkit-text-stroke: 2px white; /* Thicker white stroke */
+  -webkit-text-stroke: 2px white;
   text-stroke: 2px white;
-  margin: 0 auto; /* Center the block element */
-  padding: 0; /* Removed padding for better centering */
-  width: fit-content; /* Make width adjust to content */
-  display: block; /* Ensure it's a block element */
+  margin: 0 auto;
+  padding: 0;
+  width: fit-content;
+  display: block;
 }
 
 /* Responsive styling */
@@ -269,20 +267,59 @@
   }
 }
 
+/* Tablet-specific styling */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero-heading {
+    font-size: 72px;
+    letter-spacing: 3px;
+    line-height: 1.2;
+  }
+}
+
 /* Mobile-specific styling */
 @media (max-width: 767px) {
   .hero-heading {
-    font-size: 36px;
-    letter-spacing: 2px;
-    line-height: 1.2;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    line-height: 1.1;
+  }
+
+  .btn-travel {
+    font-size: 12px;
+    padding: 10px 20px;
   }
 }
 
 @media (max-width: 480px) {
   .hero-heading {
-    font-size: 28px;
-    letter-spacing: 1px;
-    line-height: 1.2;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+  }
+
+  .btn-travel {
+    font-size: 11px;
+    padding: 8px 16px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 360px) {
+  .hero-heading {
+    font-size: 16px;
+    letter-spacing: 0.3px;
+    line-height: 1.1;
+  }
+
+  .btn-travel {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-inner img {
+    height: 110vh; /* Increased from 500px to 110vh */
   }
 }
 
@@ -297,26 +334,26 @@
 
 .btn-travel {
   display: inline-block;
-  padding: 15px 35px; /* Increased padding for more height and width */
-  background-color: #82b8e4; /* Blue background as requested */
-  color: #ffffff; /* White text as requested */
+  padding: 15px 35px;
+  background-color: #82b8e4;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 30px;
   font-family: "Kanit", sans-serif;
-  font-size: 18px; /* Desktop font size as requested */
+  font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  border: 2px solid #82b8e4; /* Match border to background */
-  text-size-adjust: 100%; /* Text size adjust as requested */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Added shadow */
+  border: 2px solid #82b8e4;
+  text-size-adjust: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-travel:hover {
-  background-color: transparent;
-  color: #595552 !important; /* Dark brown text on hover as requested */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  background-color: #595552;
+  color: #ffffff !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
   border-color: #595552;
 }
 
@@ -328,38 +365,38 @@
 
 .btn-discover {
   display: inline-block;
-  padding: 12px 30px; /* Decreased padding */
-  background-color: #82b8e4; /* Blue background same as travel button */
-  color: #ffffff; /* White text */
+  padding: 12px 30px;
+  background-color: #82b8e4;
+  color: #ffffff;
   text-decoration: none;
   border-radius: 30px;
   font-family: "Kanit", sans-serif;
-  font-size: 16px; /* Decreased font size */
+  font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: all 0.3s ease;
-  border: 2px solid #82b8e4; /* Match border to background */
+  border: 2px solid #82b8e4;
   text-size-adjust: 100%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn-discover:hover {
-  background-color: transparent;
-  color: #82b8e4; /* Blue text on hover */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+  background-color: #595552;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Mobile button styling */
 @media (max-width: 767px) {
   .btn-travel {
-    font-size: 13px; /* Mobile font size updated to 13px */
-    padding: 12px 25px; /* Increased padding for slightly more height */
+    font-size: 13px;
+    padding: 12px 25px;
   }
 
   .btn-discover {
-    font-size: 13px; /* Mobile font size */
-    padding: 12px 30px; /* Reduced padding for mobile */
+    font-size: 13px;
+    padding: 12px 30px;
   }
 }
 
@@ -594,20 +631,20 @@
   left: 20px;
   right: 20px;
   background: rgba(255, 255, 255, 0.9);
-  padding: 8px 12px; /* Increased padding */
+  padding: 8px 12px;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  height: 60px; /* Increased height */
-  align-items: center; /* Center items vertically */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  height: 60px;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .departure-left {
   display: flex;
   align-items: center;
   gap: 5px;
-  height: 24px; /* Match price icon height */
-  margin: auto 0; /* Vertically center within available space */
+  height: 24px;
+  margin: auto 0;
 }
 
 .departure-icon {
@@ -620,29 +657,29 @@
   display: flex;
   flex-direction: column;
   text-align: left;
-  justify-content: center; /* Vertically center the content */
-  height: 100%; /* Take full height of parent */
-  flex: 1; /* Allow it to grow and take available space */
+  justify-content: center;
+  height: 100%;
+  flex: 1;
 }
 
 .departure-date-overlay {
-  font-size: 15px; /* Increased by 1px */
-  font-weight: 800; /* Bolder font weight */
-  color: #8a8784; /* Lighter color */
+  font-size: 15px;
+  font-weight: 800;
+  color: #8a8784;
 }
 
 .price-amount {
-  font-size: 15px; /* Increased by 1px */
-  font-weight: 800; /* Bolder font weight */
-  color: #8a8784; /* Lighter color */
+  font-size: 15px;
+  font-weight: 800;
+  color: #8a8784;
   text-align: right;
-  margin-top: 4px; /* Add some spacing between Price label and amount */
-  align-self: flex-end; /* Align to right */
-  white-space: nowrap; /* Prevent wrapping */
-  line-height: 1; /* Ensure consistent line height */
-  max-width: 100%; /* Prevent overflow */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Show ellipsis for overflow */
+  margin-top: 4px;
+  align-self: flex-end;
+  white-space: nowrap;
+  line-height: 1;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .price-info {
@@ -650,35 +687,35 @@
   flex-direction: column;
   text-align: right;
   align-items: flex-end;
-  justify-content: center; /* Vertically center the content */
-  height: 100%; /* Take full height of parent */
-  flex: 0 0 auto; /* Don't grow, don't shrink */
-  min-width: 120px; /* Ensure minimum width for content */
-  max-width: 40%; /* Prevent overflow */
-  overflow: hidden; /* Hide overflow */
-  margin-right: 0; /* Remove right margin to move content more to the right */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  justify-content: center;
+  height: 100%;
+  flex: 0 0 auto;
+  min-width: 120px;
+  max-width: 40%;
+  overflow: hidden;
+  margin-right: 0;
+  box-sizing: border-box;
 }
 
 .price-left {
   display: flex;
   align-items: center;
   gap: 5px;
-  height: 24px; /* Match calendar icon height */
-  margin: 0; /* Remove vertical margins */
-  align-self: flex-end; /* Align to right */
-  width: 100%; /* Take full width */
-  justify-content: flex-end; /* Align content to right */
-  padding-right: 5px; /* Reduce padding to move content more to the right */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  height: 24px;
+  margin: 0;
+  align-self: flex-end;
+  width: 100%;
+  justify-content: flex-end;
+  padding-right: 5px;
+  box-sizing: border-box;
 }
 
 .price-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 24px; /* Match calendar icon height */
-  width: 24px; /* Match calendar icon width for proper centering */
+  height: 24px;
+  width: 24px;
 }
 
 .buttons-overlay {
@@ -686,26 +723,25 @@
   left: 20px;
 }
 .buttons-overlay .btn {
-  padding: 8px 16px; /* Increased padding */
+  padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  font: 600 14px "Poppins", sans-serif; /* Increased font size by 2px */
+  font: 600 14px "Poppins", sans-serif;
   cursor: pointer;
-  transition: none; /* Removed hover transition */
+  transition: none;
 }
 .btn.confirmed {
   background: rgb(255, 255, 255); /* White background */
-  color: #4a6b3e; /* Slightly darker text color */
+  color: #4a6b3e;
   display: flex;
   align-items: center;
-  gap: 5px; /* Space between icon and text */
+  gap: 5px;
 }
 
 .btn.complete {
   background: rgb(255, 255, 255); /* White background */
-  color: #4a4744; /* Slightly darker text color */
+  color: #4a4744;
 }
-/* Removed hover effect */
 
 /* ---------- Card Text ---------- */
 .program-title {
@@ -790,17 +826,25 @@
 
 /* Objective Nepal Section */
 .objective-nepal {
-  background-image: url("./images/a.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 66vh; /* Set height to 66% of viewport height */
-  padding: 0 20px; /* Remove vertical padding since we're setting height */
+  height: 442.992px;
+  width: 100%;
+  padding: 0 20px 10px 20px;
   margin: 60px 0;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.nepal-background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 
 .objective-nepal::before {
@@ -810,23 +854,39 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Dark overlay for better text readability */
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
-.nepal-content {
+.nepal-text-container {
   position: relative;
   z-index: 2;
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 40%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  margin-left: 40px;
+}
+
+/* Desktop-specific adjustments */
+@media (min-width: 769px) {
+  .nepal-text-container {
+    width: 35%;
+    height: 95%;
+    margin-left: 60px;
+  }
+}
+
+.nepal-content {
+  max-width: 100%;
+  margin: 0;
   text-align: left;
   color: white;
-  padding-left: 40px; /* Add 40px padding on the left side */
+  padding: 0; /* Remove padding since it's now on the container */
 }
 
 .nepal-content h3 {
@@ -836,11 +896,11 @@
   text-transform: uppercase;
   margin-bottom: 30px;
   color: white;
-  text-align: left; /* Changed from center to left */
+  text-align: left;
 }
 
 .nepal-content p {
-  font-family: "Kanti", sans-serif;
+  font-family: "Kanit", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.6;
@@ -850,25 +910,35 @@
 
 .white-bold {
   color: white;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .blue-text {
   color: #82b8e4;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
   .objective-nepal {
-    padding: 60px 15px;
-    margin: 40px 0;
+    padding: 40px 15px 10px 15px;
+    margin: 30px 0;
+    height: 80vh;
+  }
+
+  .nepal-text-container {
+    width: 90%;
+    height: 90%;
+    padding: 15px;
   }
 
   .nepal-content h3 {
-    font-size: 28px;
+    font-size: 24px;
+    margin-bottom: 20px;
   }
 
   .nepal-content p {
-    font-size: 16px;
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 15px;
   }
 }
