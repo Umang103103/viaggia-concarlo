@@ -94,7 +94,7 @@ body {
     left: 0;
     min-width: 200px;
     margin: 0;
-    top: calc(100% + 35px);
+    top: calc(100% + 27px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     z-index: 999;
   }
@@ -108,8 +108,8 @@ body {
 
   /* Hover effect for items */
   .navbar-nav .dropdown .dropdown-menu .dropdown-item:hover {
-    background-color: #7a7a7a;
-    color: #fff;
+    background-color: #fff;
+    color: #82b8e4;
   }
 }
 
